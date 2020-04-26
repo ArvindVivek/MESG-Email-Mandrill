@@ -1,0 +1,11 @@
+{
+  "name": "your-package-name",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@mesg/application": "^0.2.1",
+    "@mesg/cli": "^0.4.4",
+    "@mesg/service": "^0.2.3",
+    "mesg-cli": "^2.0.1"
+  }
+}

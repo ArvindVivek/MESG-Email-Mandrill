@@ -1,0 +1,40 @@
+name: "Email Mandrill"
+sid: email-mandrill
+description: "Send Email with Mandrill.
+This service requires the env MANDRILL_API_KEY to contain a Mandrill API key that you can create here https://app.mailchimp.com/settings/api_keys."
+repository: https://github.com/mesg-foundation/service-email-mandrill
+configuration:
+  env:
+    - MANDRILL_API_KEY=
+tasks: 
+  send:
+    name: "Send"
+    description: "Send email with Mndrill"
+    inputs:
+      from:
+        name: "From"
+        description: "The account to send the email from"
+        type: String
+      to:
+        name: "To"
+        description: "The recipient of the email"
+        type: String
+      subject:
+        name: "Subject"
+        description: "The subject of the email"
+        type: String
+      text:
+        name: "Text"
+        description: "The text of the email"
+        type: String
+        optional: true
+      html:
+        name: "HTML"
+        description: "The html content of the email"
+        type: String
+        optional: true
+    outputs:
+      status:
+        name: "Status"
+        description: "Status returned by the Mandrill API"
+        type: Number
